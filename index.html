@@ -1,161 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zaze Pay – P2P Made Easy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaze Pay | Your crypto. Your move.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;600&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--deep:#062e1a;--green:#16a34a;--mint:#4ade80;--tint:#eef8f1;--text:#0c1a12;--muted:#55695d;--line:#d6e8dc;color-scheme:light;box-sizing:border-box}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
-h1,h2,h3,.logo,.disp{font-family:"Bricolage Grotesque",Inter,system-ui,sans-serif}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-.btn{display:inline-block;padding:15px 30px;border-radius:99px;font-weight:600;text-decoration:none;font-size:16px;background:var(--green);color:#fff}
-.btn.w{background:#fff;color:var(--deep)}
-.btn.o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
-.hero{background:var(--deep);color:#fff;position:relative;overflow:hidden;padding-top:env(safe-area-inset-top,0px)}
-.hero:before{content:"ZAZE";position:absolute;right:-20px;bottom:-60px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(180px,34vw,420px);line-height:1;color:rgba(255,255,255,.04);letter-spacing:-10px;pointer-events:none}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:relative;z-index:2}
-.logo{font-weight:800;font-size:24px;letter-spacing:-.5px}
-.logo i{display:inline-block;width:9px;height:9px;background:var(--mint);border-radius:50%;margin-left:3px}
-.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;padding:34px 0 84px;position:relative;z-index:2}
-.kick{display:inline-block;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);font-weight:600;margin-bottom:16px}
-h1{font-size:clamp(50px,10vw,100px);line-height:.92;letter-spacing:-3.5px;margin:0 0 22px;font-weight:800}
-h1 span{color:var(--mint)}
-.hero p{font-size:19px;color:#b9dcc6;max-width:430px;margin:0 0 30px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.pw{position:relative;display:flex;justify-content:center;padding:10px 0}
-.phone{width:262px;height:530px;background:#0a0a0a;border-radius:46px;padding:9px;transform:rotate(-5deg);box-shadow:0 40px 70px -20px rgba(0,0,0,.6);position:relative}
-.screen{height:100%;background:#fff;border-radius:38px;padding:38px 18px 18px;display:flex;flex-direction:column;color:var(--text);position:relative;overflow:hidden}
-.screen:before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:78px;height:19px;background:#0a0a0a;border-radius:12px}
-.screen .t{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:700}
-.screen .big{font-family:"Bricolage Grotesque",sans-serif;font-size:36px;line-height:1;font-weight:800;letter-spacing:-1.3px;margin:8px 0 20px;color:var(--deep)}
-.b{max-width:86%;padding:9px 13px;border-radius:16px;font-size:13px;margin-bottom:9px;line-height:1.4}
-.b.in{background:var(--tint);border-bottom-left-radius:4px}
-.b.out{background:var(--green);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
-.wa{margin-top:auto;background:var(--deep);color:#fff;text-align:center;font-weight:700;padding:13px;border-radius:99px;font-size:14px}
-.chip{position:absolute;background:#fff;color:var(--deep);font-weight:700;font-size:14px;padding:9px 16px;border-radius:99px;box-shadow:0 10px 24px -8px rgba(0,0,0,.4);font-family:"Bricolage Grotesque",sans-serif}
-.c1{top:56px;left:2%}.c2{top:210px;right:0}.c3{bottom:70px;left:0}
-.marq{background:var(--green);color:#fff;overflow:hidden;white-space:nowrap;padding:15px 0;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;letter-spacing:.5px}
-.marq div{display:inline-block;animation:m 26s linear infinite}
-.marq span{margin:0 22px}
-@keyframes m{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marq div{animation:none}}
-section{padding:78px 0}
-.k{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:10px}
-h2{font-size:clamp(34px,6vw,58px);line-height:1;letter-spacing:-2px;margin:0 0 38px;font-weight:800}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.pan{border-radius:28px;padding:38px 30px;min-height:300px;display:flex;flex-direction:column}
-.pan.a{background:var(--tint)}
-.pan.s{background:var(--green);color:#fff}
-.pan h3{font-size:clamp(40px,7vw,64px);letter-spacing:-2px;margin:0 0 10px;line-height:1}
-.pan p{font-size:18px;margin:0;max-width:360px}
-.pan.a p{color:var(--muted)}
-.pan .ar{margin-top:auto;font-size:44px;line-height:1;font-family:"Bricolage Grotesque",sans-serif}
-.how{background:var(--tint)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.num{font-family:"Bricolage Grotesque",sans-serif;font-size:84px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:2px var(--green);margin-bottom:8px}
-.steps h3{font-size:25px;margin:0 0 6px;letter-spacing:-.6px}
-.steps p{margin:0;color:var(--muted)}
-.faq{max-width:760px}
-details{border-top:1.5px solid var(--text);padding:20px 0}
-details:last-child{border-bottom:1.5px solid var(--text)}
-summary{cursor:pointer;font-family:"Bricolage Grotesque",sans-serif;font-size:22px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:14px}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";color:var(--green);font-size:28px;line-height:1}
-details[open] summary:after{content:"–"}
-details p{margin:12px 0 0;color:var(--muted);font-size:17px}
-.final{background:var(--deep);color:#fff;text-align:center;padding:92px 0}
-.final h2{margin:0 auto 14px;max-width:780px}
-.final p{color:#b9dcc6;font-size:18px;margin:0 auto 30px;max-width:440px}
-.final .btn{background:var(--mint);color:var(--deep);font-size:18px;padding:17px 38px}
-footer{background:var(--deep);color:#8fb59f;text-align:center;padding:0 22px calc(36px + env(safe-area-inset-bottom,0px));font-size:14px}
-footer .logo{color:#fff;margin-bottom:6px}
-footer p{margin:4px 0}
-.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:99px;box-shadow:0 12px 28px -8px rgba(0,0,0,.45);z-index:9;font-size:15px}
-@media (max-width:820px){
-.hgrid{grid-template-columns:1fr;padding-bottom:60px}
-.two,.steps{grid-template-columns:1fr}
-.pan{min-height:230px}
-section{padding:56px 0}
-h1{letter-spacing:-2.5px}
-.c1{left:-2px}
-}
+:root{--deep:#062e1a;--green:#16a34a;--mint:#4ade80;--tint:#eef8f1;--text:#0c1a12;--muted:#55695d;--line:#d6e8dc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.65}a{text-decoration:none}
+.wrap{max-width:1100px;margin:auto;padding:0 24px}
+.hero{background:var(--deep);color:#fff;overflow:hidden;position:relative}
+.hero:after{content:"ZAZE";position:absolute;right:-25px;bottom:-80px;font:800 clamp(180px,35vw,430px)/1 "Bricolage Grotesque";color:#ffffff09;pointer-events:none}
+nav{height:88px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+.logo{font:800 25px "Bricolage Grotesque";letter-spacing:-1px}.logo i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--mint);margin-left:3px}
+.btn{display:inline-block;padding:14px 25px;border-radius:50px;font-weight:700;background:var(--green);color:#fff;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.btn.white{background:#fff;color:var(--deep)}.btn.outline{background:transparent;border:1px solid #ffffff70;color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center;padding:55px 0 105px;position:relative;z-index:1}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);font-weight:700}
+h1,h2,h3{font-family:"Bricolage Grotesque",Inter,sans-serif;line-height:1.08;letter-spacing:-1px}
+h1{font-size:clamp(52px,7vw,86px);margin:18px 0}.hero p{max-width:490px;color:#c1d9ca;font-size:18px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.mock-wrap{min-height:390px;display:grid;place-items:center;position:relative}
+.phone{width:270px;background:#fff;border:8px solid #dce8df;border-radius:34px;padding:14px;color:var(--text);box-shadow:0 30px 80px #0005;transform:rotate(3deg)}
+.phone-top{font-size:12px;color:var(--muted);text-align:center;padding:4px}.phone h3{font-size:24px;margin:24px 5px 16px}.bubble{padding:13px 15px;border-radius:17px;font-size:12px;margin:10px 0}.bubble.sent{background:#e8f7ed;margin-left:24px}.bubble.reply{background:#f1f4f2;margin-right:18px}.phone-cta{background:var(--green);color:white;text-align:center;border-radius:30px;padding:12px;font-size:12px;font-weight:700;margin-top:22px}
+.coin{position:absolute;border-radius:50%;width:60px;height:60px;display:grid;place-items:center;background:#fff;color:var(--deep);font-weight:800;box-shadow:0 10px 30px #0003}.coin.one{top:22px;left:7%}.coin.two{right:3%;top:80px}.coin.three{bottom:18px;left:12%}
+section{padding:85px 0}.section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--green);font-weight:700}.section-head{max-width:620px;margin-bottom:35px}.section-head h2{font-size:clamp(34px,5vw,52px);margin:12px 0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff}.card .num{font-size:12px;color:var(--green);font-weight:800;letter-spacing:1px}.card h3{font-size:24px;margin:16px 0 8px}.card p{color:var(--muted);margin:0}
+.assets{background:var(--tint)}.asset-list{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.asset{background:#fff;border:1px solid var(--line);border-radius:19px;padding:24px 12px 20px;text-align:center;font-weight:700;box-shadow:0 8px 24px #062e1a0b;transition:transform .2s,box-shadow .2s}.asset:hover{transform:translateY(-5px);box-shadow:0 15px 32px #062e1a18}.asset-mark{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;margin:0 auto 13px;font-size:34px;font-weight:800;line-height:1}.asset-mark svg{width:39px;height:39px;display:block}.asset small{display:block;color:var(--muted);font-size:12px;font-weight:500;margin-top:4px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:25px 0;border-top:2px solid var(--green)}.step b{font:800 34px "Bricolage Grotesque";color:var(--green)}.step h3{font-size:22px;margin:14px 0 8px}.step p{color:var(--muted);margin:0}
+.about{background:var(--deep);color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about h2{font-size:clamp(36px,5vw,54px);margin:14px 0}.about p{color:#c1d9ca}.promise{display:grid;grid-template-columns:1fr 1fr;gap:12px}.promise div{border:1px solid #ffffff25;border-radius:16px;padding:18px;color:#d5e8dc}.promise strong{display:block;color:var(--mint);margin-bottom:5px}
+.faq{max-width:780px}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{font-weight:700;cursor:pointer}.faq details p{color:var(--muted);margin:12px 0 0}
+.final{background:var(--tint);text-align:center}.final h2{font-size:clamp(36px,5vw,55px);max-width:720px;margin:12px auto}.final p{color:var(--muted);margin:0 auto 25px}
+.legal{padding:45px 0;background:#fafcfb}.legal-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.legal h3{font-size:20px}.legal p{font-size:13px;color:var(--muted)}
+footer{background:#041f12;color:#fff;padding:55px 0 25px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}.footer-grid h4{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--mint)}.footer-grid a{display:block;color:#c1d9ca;font-size:14px;margin:9px 0}.footer-grid p{color:#a9c5b3;font-size:14px;max-width:300px}.copyright{border-top:1px solid #ffffff22;margin-top:35px;padding-top:20px;color:#a9c5b3;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fab{position:fixed;right:20px;bottom:20px;background:var(--green);color:#fff;padding:13px 18px;border-radius:40px;font-weight:700;box-shadow:0 8px 25px #0003;z-index:5}
+@media(max-width:760px){.hero-grid,.about-grid,.legal-grid{grid-template-columns:1fr}.hero-grid{padding:35px 0 65px;gap:20px}.mock-wrap{min-height:340px}.cards{grid-template-columns:1fr}.asset-list{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.promise{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}section{padding:62px 0}nav{height:75px}}
+
+/* Keep the simple-process section balanced after removing its subtitle. */
+.simple-process .section-head { margin-bottom: 24px; }
 </style>
 </head>
 <body>
 <header class="hero">
-<div class="wrap">
-<nav><div class="logo">Zaze Pay<i></i></div><a class="btn w" style="padding:10px 20px;font-size:15px" href="#start">Get started</a></nav>
-<div class="hgrid">
-  <div>
-    <span class="kick">Peer-to-peer crypto</span>
-    <h1>P2P made <span>easy.</span></h1>
-    <p>Buy and sell with confidence. Fast, simple trades handled directly with you on WhatsApp.</p>
-    <div class="cta"><a class="btn w" href="#start">Get started</a><a class="btn o" href="#how">How it works</a></div>
+ <div class="wrap">
+  <nav><div class="logo">Zaze Pay<i></i></div><a class="btn white" href="#start">Get started</a></nav>
+  <div class="hero-grid">
+   <div><div class="eyebrow">Peer-to-peer crypto exchange</div><h1>Your crypto.<br><span style="color:var(--mint)">Your move.</span><br>Made simple.</h1>
+    <p>Buy and sell crypto with clear rates, straightforward communication and personal assistance from our team.</p>
+    <div class="hero-actions"><a class="btn white" href="https://wa.me/2347046302987" target="_blank" rel="noopener">Start a trade</a><a class="btn outline" href="#how">How it works</a></div>
+   </div>
+   <div class="mock-wrap"><div class="coin one">₮</div><div class="coin two">₿</div><div class="coin three">◎</div><div class="phone"><div class="phone-top">ZAZE PAY · CHAT PREVIEW</div><h3>Let's make your trade simple.</h3><div class="bubble sent">Hi, I’d like to sell my USDT.</div><div class="bubble reply">Welcome! Let’s confirm the amount and current rate.</div><div class="bubble sent">Sounds good. What are the next steps?</div><div class="phone-cta">CHAT WITH ZAZE PAY</div></div></div>
   </div>
-  <div class="pw">
-    <div class="chip c1">USDT</div><div class="chip c2">BTC</div><div class="chip c3">SOL</div>
-    <div class="phone"><div class="screen">
-      <div class="t">Zaze Pay</div>
-      <div class="big">Choose Zaze today.</div>
-      <div class="b out">Hi, I want to sell my USDT</div>
-      <div class="b in">Welcome! Send the amount and we’ll get you paid in Naira.</div>
-      <div class="wa">Chat on WhatsApp</div>
-    </div></div>
-  </div>
-</div>
-</div>
+ </div>
 </header>
-
-<div class="marq"><div><span>USDT</span>•<span>USDC</span>•<span>BTC</span>•<span>SOLANA</span>•<span>TRX</span>•<span>AND MANY MORE</span>•<span>USDT</span>•<span>USDC</span>•<span>BTC</span>•<span>SOLANA</span>•<span>TRX</span>•<span>AND MANY MORE</span>•</div></div>
-
-<section><div class="wrap">
-  <div class="k">What we offer</div>
-  <h2>Buy. Sell. Done.</h2>
-  <div class="two">
-    <div class="pan a"><h3>Buy crypto</h3><p>USDT, USDC, BTC, Solana, TRX and many more.</p><div class="ar">→</div></div>
-    <div class="pan s"><h3>Sell crypto</h3><p>Send your crypto assets and get paid in Naira, fast and hassle-free.</p><div class="ar">→</div></div>
-  </div>
+<section id="services"><div class="wrap"><div class="section-head"><div class="section-kicker">What we do</div><h2>Crypto exchange, without the confusion.</h2><p>Whether you’re buying or selling, we keep the process clear from the first message to the final confirmation.</p></div>
+ <div class="cards"><div class="card"><div class="num">01 / BUY</div><h3>Buy crypto</h3><p>Tell us the asset and amount you need. We’ll confirm the available rate and payment details before you proceed.</p></div><div class="card"><div class="num">02 / SELL</div><h3>Sell crypto</h3><p>Let us know what you want to sell. Once the details are agreed and your transfer is verified, we’ll arrange your Naira payment.</p></div></div>
 </div></section>
-
-<section class="how" id="how"><div class="wrap">
-  <div class="k">How it works</div>
-  <h2>Three steps. That’s it.</h2>
-  <div class="steps">
-    <div><div class="num">01</div><h3>Message us</h3><p>Tap WhatsApp and tell us what you want to buy or sell.</p></div>
-    <div><div class="num">02</div><h3>Buy or sell</h3><p>Choose your coin and complete your order.</p></div>
-    <div><div class="num">03</div><h3>Confirm &amp; complete</h3><p>Confirm payment and receive your crypto or funds.</p></div>
-  </div>
+<section class="assets"><div class="wrap"><div class="section-head"><div class="section-kicker">Supported assets</div><h2>Trade the assets you use.</h2><p>Ask our team to confirm availability, network and minimum transaction amounts before sending any crypto.</p></div>
+ <div class="asset-list">
+  <div class="asset"><div class="asset-mark" style="background:#e5f8ef;color:#26a17b">₮</div>USDT<small>Tether</small></div>
+  <div class="asset"><div class="asset-mark" style="background:#e8f0ff;color:#2775ca"><svg viewBox="0 0 48 48" aria-label="USDC logo"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="4"/><path d="M31 16c-2-2-4-3-7-3-5 0-8 3-8 7 0 4 3 6 8 7 5 1 8 3 8 7s-3 7-8 7c-3 0-6-1-8-4M24 7v34" fill="none" stroke="currentColor" stroke-width="3.3" stroke-linecap="round"/></svg></div>USDC<small>USD Coin</small></div>
+  <div class="asset"><div class="asset-mark" style="background:#fff1e8;color:#f7931a">₿</div>BTC<small>Bitcoin</small></div>
+  <div class="asset"><div class="asset-mark" style="background:#f1edff;color:#6d48d7"><svg viewBox="0 0 48 48" aria-label="Solana logo"><path d="M10 13h27l-5 5H5l5-5Zm6 9h27l-5 5H11l5-5Zm-6 9h27l-5 5H5l5-5Z" fill="currentColor"/></svg></div>SOL<small>Solana</small></div>
+  <div class="asset"><div class="asset-mark" style="background:#fff0f0;color:#eb0029"><svg viewBox="0 0 48 48" aria-label="TRON logo"><path d="M7 8 40 14 23 41 7 8Zm0 0 16 33 4-24L7 8Zm20 9 13-3" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/></svg></div>TRX<small>TRON</small></div>
+ </div>
 </div></section>
-
-<section><div class="wrap">
-  <div class="k">Good to know</div>
-  <h2>Quick answers.</h2>
-  <div class="faq">
-    <details><summary>Do I need to create an account?</summary><p>No. There’s no sign-up. Just message us on WhatsApp and we’ll take it from there.</p></details>
-    <details><summary>Which coins can I trade?</summary><p>USDT, USDC, BTC, Solana, TRX and many more. Ask us on WhatsApp if you don’t see yours.</p></details>
-    <details><summary>How do I get paid when I sell?</summary><p>Send your crypto assets and you’ll be paid in Naira.</p></details>
-    <details><summary>How do I start?</summary><p>Tap “Get started”, then tap the WhatsApp button and send us a message.</p></details>
-  </div>
+<section id="how" class="simple-process"><div class="wrap"><div class="section-head"><div class="section-kicker">Simple process</div></div>
+ <div class="steps"><div class="step"><b>01</b><h3>Send us a message</h3><p>Reach out on WhatsApp and tell us whether you want to buy or sell.</p></div><div class="step"><b>02</b><h3>Confirm the details</h3><p>Agree on the asset, amount, rate, network and payment details before proceeding.</p></div><div class="step"><b>03</b><h3>Complete your trade</h3><p>Follow the confirmed instructions. We’ll verify the transaction and confirm when it is complete.</p></div></div>
 </div></section>
-
-<section class="final" id="start"><div class="wrap">
-  <h2>Trade your crypto with a reliable, trusted vendor.</h2>
-  <p>Tap the button and message us to start your first trade.</p>
-  <a class="btn" href="https://wa.me/2347046302987" target="_blank" rel="noopener">Chat on WhatsApp</a>
-  <a class="btn" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);margin:6px" href="https://www.snapchat.com/add/zazepay.ng" target="_blank" rel="noopener">Add us on Snapchat</a>
-</div></section>
-
-<footer>
-  <div class="logo">Zaze Pay<i></i></div>
-  <p>Trade your crypto with a reliable, trusted vendor.</p>
-  <p>© 2026 Zaze Pay. All rights reserved.</p>
-</footer>
-
+<section class="about" id="about"><div class="wrap about-grid"><div><div class="section-kicker" style="color:var(--mint)">Why choose Zaze Pay?</div><h2>More than an exchange. A better experience.</h2><p>At Zaze Pay, we believe exchanging crypto should be simple, transparent and stress-free. Here’s what you can expect when you trade with us:</p><a class="btn white" href="https://wa.me/2347046302987" target="_blank" rel="noopener">Talk to our team</a></div>
+ <div class="promise">
+  <div><strong>⚡ Fast Payments</strong>We value your time and prioritise prompt payments once transactions are confirmed.</div>
+  <div><strong>🤝 Honesty &amp; Transparency</strong>No hidden surprises. We keep things clear, honest and straightforward from start to finish.</div>
+  <div><strong>💬 Good Communication</strong>We’re always available to keep you informed and ensure you know what’s happening with your transaction.</div>
+  <div><strong>🧭 Guidance When You Need It</strong>New to crypto or confused about a transaction? We’ll patiently guide you through the process, one step at a time.</div>
+  <div><strong>🌐 Better Trading Options</strong>We help you understand available blockchain networks and chain options so you can make informed decisions and avoid unnecessary mistakes.</div>
+  <div><strong>🟢 Always Active</strong>We’re always reachable and ready to attend to your enquiries and trading needs.</div>
+ </div></div></section>
+<section id="faq"><div class="wrap"><div class="section-head"><div class="section-kicker">Good to know</div><h2>Frequently asked questions.</h2></div><div class="faq">
+ <details><summary>Which cryptocurrencies can I trade?</summary><p>We list USDT, USDC, BTC, SOL and TRX. Please message us to confirm current availability and supported networks.</p></details>
+ <details><summary>How do I know the rate?</summary><p>Our team will confirm the current rate with you directly before you agree to a trade. Rates can change with the market.</p></details>
+ <details><summary>When should I send my crypto?</summary><p>Only send crypto after you have confirmed the amount, network, wallet address and all trade details with our team.</p></details>
+ <details><summary>How do I receive payment when I sell?</summary><p>Payment arrangements are confirmed with you before the trade. Your crypto transfer must be verified before the transaction is marked complete.</p></details>
+ <details><summary>Can a crypto transfer be reversed?</summary><p>Most cryptocurrency transfers cannot be reversed. Always double-check the wallet address and network before sending.</p></details>
+</div></div></section>
+<section class="final" id="start"><div class="wrap"><div class="section-kicker">Ready when you are</div><h2>Let’s make your next crypto trade simple.</h2><p>Have a question or ready to trade? Start a conversation with Zaze Pay.</p><a class="btn" href="https://wa.me/2347046302987" target="_blank" rel="noopener">Chat on WhatsApp</a> <a class="btn" style="background:var(--deep);margin-left:8px" href="https://www.snapchat.com/add/zazepay.ng" target="_blank" rel="noopener">Find us on Snapchat</a></div></section>
+<section class="legal"><div class="wrap legal-grid"><div id="privacy"><h3>Privacy policy</h3><p>When you contact Zaze Pay, you may share information such as your name, phone number and transaction details. We use information you provide to respond to enquiries, arrange trades and provide customer support. We do not publish your personal information. Information may be shared where necessary to complete a transaction or comply with applicable law. Contact us if you have questions about how your information is handled.</p></div><div id="terms"><h3>Terms of service</h3><p>All trade details, including the asset, amount, rate, network and payment instructions, must be agreed before a transaction begins. You are responsible for checking wallet addresses and networks carefully. Cryptocurrency transfers are generally irreversible. Rates may change with market conditions. Zaze Pay may decline a transaction where details cannot be verified. Nothing on this website is investment or financial advice. These general website terms and privacy wording should be reviewed and adapted to the business’s actual operations and applicable Nigerian legal requirements before publication.</p></div></div></section>
+<footer><div class="wrap"><div class="footer-grid"><div><div class="logo">Zaze Pay<i></i></div><p>Peer-to-peer crypto trading made simple. Clear communication and personal assistance, one trade at a time.</p></div><div><h4>Explore</h4><a href="#about">About us</a><a href="#services">Our services</a><a href="#how">How it works</a></div><div><h4>Help</h4><a href="#faq">FAQs</a><a href="#privacy">Privacy policy</a><a href="#terms">Terms of service</a></div><div><h4>Connect</h4><a href="https://wa.me/2347046302987" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.snapchat.com/add/zazepay.ng" target="_blank" rel="noopener">Snapchat: zazepay.ng</a></div></div><div class="copyright"><span>© 2026 Zaze Pay. All rights reserved.</span><span>Trade with clarity. Trade with confidence.</span></div></div></footer>
 <a class="fab" href="https://wa.me/2347046302987" target="_blank" rel="noopener">WhatsApp us</a>
-</body>
-</html>
+</body></html>
